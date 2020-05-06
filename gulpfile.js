@@ -6,19 +6,21 @@ const sass = require('gulp-sass');
 
 
 // Static server
-function bs () {
+function bs() {
+	serveSass();
+	// minify();
 	browserSync.init({
 		server: {
 			baseDir: "./src/"
 		}
-	})
+	});
 	watch("./src/*.html").on('change', browserSync.reload);
 	watch("./src/sass/**/*.sass", serveSass);
 	watch("./src/js/*.js").on('change', browserSync.reload);
 };
 
-// function minify() {
-// 	cssmin.src('src/**/*.css')
+// function minify () {
+// 	return src('src/**/*.css')
 // 			.pipe(cssmin())
 // 			.pipe(rename({suffix: '.min'}))
 // 			.pipe(dest('dist'));
