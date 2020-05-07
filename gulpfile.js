@@ -4,6 +4,7 @@ const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css')
 
 
 // Static server
@@ -22,6 +23,7 @@ function bs() {
 
 // function minify () {
 // 	return src('src/**/*.css')
+// 			.pipe(cleanCSS())
 // 			.pipe(cssmin())
 // 			.pipe(rename({suffix: '.min'}))
 // 			.pipe(dest('dist'));
