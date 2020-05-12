@@ -356,10 +356,16 @@ body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem; }
 
+img {
+  max-width: 100%; }
+
 .section-title {
   text-align: center;
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive; }
+  .section-title__heading {
+    font-weight: normal;
+    font-size: 1.45rem; }
   .section-title__image {
     display: flex;
     justify-content: center;
@@ -446,6 +452,7 @@ body {
     text-decoration: none;
     color: #fff;
     font-family: 'Yeseva One';
+    font-weight: normal;
     font-size: 0.857rem; }
     .hero__scroll-down::after {
       content: '';
@@ -492,12 +499,72 @@ body {
 .title {
   margin: 0;
   font-family: 'Yeseva One', cursive;
+  font-weight: normal;
   text-transform: uppercase;
   font-size: 2.857rem;
   line-height: 1.35;
   margin-bottom: 1rem; }
   .title--primary {
     color: #e3b873; }
+
+.types__section-title {
+  margin-bottom: 2rem; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  max-width: 32%; }
+
+.card__text {
+  position: relative;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  margin-top: -9.3rem;
+  padding: 1.786rem 2.43rem;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  background-color: #fff; }
+
+.card__title {
+  font-family: 'Yeseva One', cursive;
+  font-weight: normal;
+  font-size: 1.285rem;
+  color: #131313;
+  margin: 0;
+  margin-bottom: 0.6rem; }
+
+.card__list {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  line-height: 1.83rem;
+  margin-bottom: 2.5rem;
+  color: #959595;
+  font-size: 1.07rem; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: -1.9rem;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  font-weight: normal;
+  background-color: #e3b873;
+  color: #fff;
+  font-size: 1.29rem;
+  padding: 1.214rem 2.5rem; }
+
+@media screen and (max-width: 760px) {
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .col {
+    max-width: 100%; }
+  .types__card {
+    margin-bottom: 5rem; }
+  .card__text {
+    margin-left: 0; } }
 
 @media screen and (max-width: 1270px) {
   html {
