@@ -532,7 +532,7 @@ body {
     margin-bottom: 1rem;
     font-size: 1.9rem; }
   .hero {
-    height: 80vh; }
+    height: 90vh; }
     .hero__scroll-down {
       display: none; }
     .hero__content {
@@ -543,7 +543,7 @@ body {
       margin-bottom: 3.1rem; }
     .hero__button {
       display: block;
-      min-width: 28.3rem;
+      min-width: 90vw;
       margin-bottom: 2.14rem;
       font-size: 1.12rem; } }
 
