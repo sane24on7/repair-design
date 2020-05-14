@@ -355,6 +355,9 @@ a, a:active, a:visited {
 html {
   font-size: 14px; }
 
+img {
+  max-width: 100%; }
+
 body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem; }
@@ -364,7 +367,8 @@ body {
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive; }
   .section-title__heading {
-    font-weight: normal; }
+    font-weight: normal;
+    font-size: 1.429rem; }
   .section-title__image {
     display: flex;
     justify-content: center;
@@ -505,9 +509,58 @@ body {
   .title--primary {
     color: #e3b873; }
 
+.types__section-title {
+  margin-bottom: 2rem; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  background-color: #fff;
+  margin-top: -9.3rem;
+  padding: 1.786rem 2.5rem; }
+
+.card__title {
+  font-family: 'Yeseva One';
+  font-size: 1.286rem;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 0.6rem; }
+
+.card__list {
+  margin: 0;
+  padding: 0 0 0 1rem;
+  color: #959595;
+  font-size: 1.071rem;
+  line-height: 1.786rem;
+  margin-bottom: 2.3rem; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: -1.93rem;
+  font-family: 'Yeseva One';
+  font-size: 1.286rem;
+  font-weight: normal;
+  background-color: #e3b873;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1.21rem 2.857rem; }
+
 @media screen and (max-width: 1280px) {
   html {
     font-size: 12px; }
+  .section-title__heading {
+    font-size: 1.833rem; }
   .nav__item {
     margin-right: 1rem; } }
 
@@ -517,6 +570,15 @@ body {
   .hero__instagram {
     display: none; }
   .hero__content {
+    margin-left: 0; } }
+
+@media screen and (max-width: 760px) {
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card {
+    margin-bottom: 4.3rem; }
+  .card__text {
     margin-left: 0; } }
 
 @media screen and (max-width: 570px) {
@@ -531,15 +593,26 @@ body {
   .hero__button {
     display: block;
     width: 100%;
-    margin-bottom: 26px; } }
-
-@media screen and (max-width: 450px) {
+    margin-bottom: 26px; }
   .hero__scroll-down {
     display: none; }
   .hero__title {
     font-size: 23px; }
   .hero__text {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .card__text {
+    padding: 1.75rem 2.6rem;
+    margin-top: -10.8rem; }
+  .card__title {
+    font-size: 1.25rem; }
+  .card__list {
+    line-height: 1.89rem;
+    margin-bottom: 1.3rem; }
+  .card__pricetag {
+    font-size: 1.25rem;
+    padding: 0.917rem 2.83rem; }
+  .types__card {
+    margin-bottom: 7rem; } }
 
 @media screen and (max-height: 550px) {
   .hero__scroll-down {
