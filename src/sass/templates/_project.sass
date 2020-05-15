@@ -1,0 +1,60 @@
+.project
+	&__subtitle
+		margin-top: 1.3rem
+		max-width: 52.86rem
+		margin-bottom: 2.86rem
+	&__card
+		margin-bottom: 7rem
+	&__img-wrap
+		position: relative
+		max-width: 392px
+		max-height: 421px
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba($dark, 0.3)
+	&__image
+		display: block
+		max-width: 100%
+		height: auto
+	&__pricetag
+		min-width: 228px
+		text-align: left
+		align-items: center
+		padding: 1.23rem 2.3rem
+	&__card-text
+		padding: 1.786rem 2.5rem
+		max-width: 23.57rem
+	&__card-title
+		margin-bottom: 0.6rem
+	&__card-list
+		margin-bottom: 2.05rem
+		line-height: 1.85rem
+
+@media screen and ( max-width: 510px )
+	.project
+		&__subtitle
+			max-width: 88%
+			font-size: 1.25rem
+			line-height: 1.8rem
+		&__card-title
+			font-size: 1.25rem
+			margin-bottom: 0.8rem
+		&__card-text
+			padding: 1.5rem 2.58rem
+			margin-top: -12rem
+		&__card-list
+			line-height: 1.91rem
+			margin-bottom: 2.04rem
+			max-height: 155px
+			text-overflow: ellipsis
+			overflow: hidden
+		&__pricetag
+			font-size: 1.25rem
+			min-width: 190px
+			min-height: 40px
+			padding: 0.98rem 3.67rem
