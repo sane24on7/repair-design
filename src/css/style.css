@@ -373,7 +373,8 @@ body {
     font-family: 'Yeseva One', cursive;
     text-transform: uppercase;
     font-weight: normal;
-    font-size: 1.429rem; }
+    font-size: 1.429rem;
+    margin-bottom: 1rem; }
   .section-title__image {
     display: flex;
     justify-content: center;
@@ -615,29 +616,6 @@ body {
   margin-bottom: 2.05rem;
   line-height: 1.85rem; }
 
-@media screen and (max-width: 510px) {
-  .project__subtitle {
-    max-width: 88%;
-    font-size: 1.25rem;
-    line-height: 1.8rem; }
-  .project__card-title {
-    font-size: 1.25rem;
-    margin-bottom: 0.8rem; }
-  .project__card-text {
-    padding: 1.5rem 2.58rem;
-    margin-top: -12rem; }
-  .project__card-list {
-    line-height: 1.91rem;
-    margin-bottom: 2.04rem;
-    max-height: 155px;
-    text-overflow: ellipsis;
-    overflow: hidden; }
-  .project__pricetag {
-    font-size: 1.25rem;
-    min-width: 190px;
-    min-height: 40px;
-    padding: 0.98rem 3.67rem; } }
-
 @media screen and (max-width: 1280px) {
   html {
     font-size: 12px; }
@@ -659,10 +637,17 @@ body {
   .row {
     flex-direction: column;
     align-items: center; }
-  .types__card {
-    margin-bottom: 4.3rem; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .card-types {
+    margin-bottom: 6.5rem; } }
+
+@media screen and (max-width: 760px) {
+  .project {
+    padding-top: 3rem;
+    background: #131313; }
+    .project__section-title, .project__subtitle {
+      color: #fff; } }
 
 @media screen and (max-width: 570px) {
   .contacts__button {
@@ -698,6 +683,29 @@ body {
       padding: 0.917rem 2.83rem; }
   .card-types {
     margin-bottom: 7rem; } }
+
+@media screen and (max-width: 510px) {
+  .project__subtitle {
+    max-width: 88%;
+    font-size: 1.25rem;
+    line-height: 1.8rem; }
+  .project__card-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem; }
+  .project__card-text {
+    padding: 1.5rem 2.58rem;
+    margin-top: -12rem; }
+  .project__card-list {
+    line-height: 1.91rem;
+    margin-bottom: 2.04rem;
+    max-height: 155px;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .project__pricetag {
+    font-size: 1.25rem;
+    min-width: 190px;
+    min-height: 40px;
+    padding: 0.98rem 3.67rem; } }
 
 @media screen and (max-height: 550px) {
   .hero__scroll-down {

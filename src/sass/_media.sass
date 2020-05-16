@@ -21,12 +21,17 @@
 	.row
 		flex-direction: column
 		align-items: center
-	.types
-		&__card
-			margin-bottom: 4.3rem
 	.card
 		&__text
 			margin-left: 0
+		&-types
+			margin-bottom: 6.5rem
+@media screen and ( max-width: 760px )
+	.project
+		padding-top: 3rem
+		background: $dark
+		&__section-title, &__subtitle
+			color: $light
 @media screen and ( max-width: 570px )
 	.contacts
 		&__button
@@ -63,7 +68,29 @@
 	.card
 		&-types
 			margin-bottom: 7rem
-
+@media screen and ( max-width: 510px )
+	.project
+		&__subtitle
+			max-width: 88%
+			font-size: 1.25rem
+			line-height: 1.8rem
+		&__card-title
+			font-size: 1.25rem
+			margin-bottom: 0.8rem
+		&__card-text
+			padding: 1.5rem 2.58rem
+			margin-top: -12rem
+		&__card-list
+			line-height: 1.91rem
+			margin-bottom: 2.04rem
+			max-height: 155px
+			text-overflow: ellipsis
+			overflow: hidden
+		&__pricetag
+			font-size: 1.25rem
+			min-width: 190px
+			min-height: 40px
+			padding: 0.98rem 3.67rem
 @media screen and ( max-height: 550px )
 	.hero
 		&__scroll-down
