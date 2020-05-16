@@ -330,16 +330,41 @@ template {
     color: #fff;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: box-shadow 0.3s; }
-    .button--primary-hero {
-      padding: 19px 27px; }
     .button--primary:hover {
       box-shadow: none; }
   .button--outline {
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
-    .button--outline-hero {
-      padding: 19px 46px; }
+
+.label {
+  font-size: 1.07rem; }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  background-color: transparent;
+  border: none;
+  font-size: 1.285rem;
+  padding: 0.5rem 0; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #e3b873 url("../img/check.svg") no-repeat center/0.8rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #e3b873;
+    border-radius: 1px;
+    margin-right: 0.64rem; }
 
 .container {
   width: 91%;
@@ -503,7 +528,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
-    font-family: 'Yeseva One';
+    font-family: 'Yeseva One', cursive;
     font-size: 0.857rem; }
     .hero__scroll-down::after {
       content: '';
@@ -525,6 +550,12 @@ body {
     margin-bottom: 3.5rem; }
   .hero__button {
     margin-right: 1.2rem; }
+
+.button--primary-hero {
+  padding: 19px 27px; }
+
+.button__outline-hero {
+  padding: 19px 46px; }
 
 .instagram {
   display: flex;
@@ -615,6 +646,64 @@ body {
 .project__card-list {
   margin-bottom: 2.05rem;
   line-height: 1.85rem; }
+
+.modal {
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    background: #131313 url("../img/bg-lines.svg") no-repeat center/cover;
+    padding: 2.35rem 3.5rem 1.928rem;
+    color: #fff; }
+  .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 28px;
+    width: 28px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__title {
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.357rem;
+    text-align: center;
+    margin-bottom: 2.428rem; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input {
+    margin-bottom: 3.428rem;
+    border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+    color: #fff; }
+    .modal__input:last-of-type {
+      margin-bottom: 1rem; }
+    .modal__input::-webkit-input-placeholder {
+      color: #fff; }
+    .modal__input::-moz-placeholder {
+      color: #fff; }
+    .modal__input:-ms-input-placeholder {
+      color: #fff; }
+    .modal__input::-ms-input-placeholder {
+      color: #fff; }
+    .modal__input::placeholder {
+      color: #fff; }
+  .modal__policy {
+    margin-bottom: 2.7rem; }
+  .modal__button {
+    align-self: flex-end;
+    padding: 1.357rem 3.286rem; }
 
 @media screen and (max-width: 1280px) {
   html {
