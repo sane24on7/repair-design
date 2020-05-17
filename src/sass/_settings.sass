@@ -14,14 +14,35 @@ body
 	font-family: 'Futura Book', sans-serif
 	font-size: 1rem
 .section
+	&--dark
+		background-color: $dark
+		color: $light
 	&-title
 		text-align: center
+		&--left
+			text-align: left
 		&__heading
 			font-family: 'Yeseva One', cursive
 			text-transform: uppercase
 			font-weight: normal
 			font-size: 1.429rem
 			margin-bottom: 1rem
+			line-height: 138.6%
+			&--primary
+				color: $primary
+		&__word
+			display: flex
+			align-items: center
+			&::after
+				content: ''
+				width: 90px
+				height: 1px
+				background-color: $primary
+				margin-left: 2rem
+		&__text
+			font-size: 1.28rem
+			line-height: 2.07rem
+			max-width: 31.57rem
 		&__image
 			display: flex
 			justify-content: center
@@ -37,12 +58,6 @@ body
 			font-size: 1.429rem
 			line-height: 1.929rem
 			color: $dark
-.row
-	display: flex
-	align-items: flex-start
-	justify-content: space-between
-.col
-	flex-basis: 32%
 .card
 	&__text
 		position: relative
@@ -51,7 +66,7 @@ body
 		background-color: $light
 		margin-top: -9.3rem
 	&__title
-		font-family: 'Yeseva One'
+		font-family: 'Yeseva One', cursive
 		font-size: 1.286rem
 		font-weight: normal
 		margin: 0
@@ -64,7 +79,7 @@ body
 	&__pricetag
 		position: absolute
 		left: 0
-		font-family: 'Yeseva One'
+		font-family: 'Yeseva One', cursive
 		font-size: 1.286rem
 		color: $light
 		text-transform: uppercase
