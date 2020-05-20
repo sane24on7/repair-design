@@ -119,8 +119,9 @@ $(document).ready(function () {
 
 	next.css('left', prev.width() + 20 + bullets.width() + 20)
 	bullets.css('left', prev.width() + 20)
+	// Элемент меню 
 
 
-			// Элемент меню 
+	new WOW().init();
 });
 
