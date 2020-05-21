@@ -75,7 +75,7 @@ $(document).ready(function () {
 			// Анимация прокрутки вниз при нажатии на кнопку листать вниз
 	btnScrollDown.on('click', function(){
     $('body, html').animate({
-      scrollTop: 620
+      scrollTop: 700
     }, 1000);
     return false; 
 	});
@@ -123,5 +123,99 @@ $(document).ready(function () {
 
 
 	new WOW().init();
+
+
+	// jQuery.validator.setDefaults({
+	// 	debug: true,
+	// 	success: "valid"
+	// });
+
+	// Валидация формы модалки
+	$('.modal__form').validate({
+		rules: {
+			userName: {
+				required: true,
+				rangelength: [2, 15]
+			},
+			userPhone: "required",
+			userEmail: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			userName: {
+				required: "Заполните поле",
+				rangelength: "Имя должно иметь от 2 до 15 символов"
+			},
+			userPhone: "Заполните поле",
+			userEmail: {
+				required: "Заполните поле",
+				email: "Введите корректный email"
+			},
+			
+		},
+		errorClass: "invalid",
+		errorElement: "div",
+	});
+	// Валидация формы control
+	$('.control__form').validate({
+		rules: {
+			userName: {
+				required: true,
+				rangelength: [2, 15]
+			},
+			userPhone: "required",
+			userEmail: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			userName: {
+				required: "Заполните поле",
+				rangelength: "Имя должно иметь от 2 до 15 символов"
+			},
+			userPhone: "Заполните поле",
+			userEmail: {
+				required: "Заполните поле",
+				email: "Введите корректный email"
+			},
+			
+		},
+		errorClass: "invalid",
+		errorElement: "div",
+	});
+	// Валидация формы footer
+	$('.footer__form').validate({
+		rules: {
+			userName: {
+				required: true,
+				rangelength: [2, 15]
+			},
+			userPhone: "required",
+			userEmail: {
+				required: true,
+				email: true
+			}
+		},
+		messages: {
+			userName: {
+				required: "Заполните поле",
+				rangelength: "Имя должно иметь от 2 до 15 символов"
+			},
+			userPhone: "Заполните поле",
+			userEmail: {
+				required: "Заполните поле",
+				email: "Введите корректный email"
+			},
+			
+		},
+		errorClass: "invalid",
+		errorElement: "div",
+	});
+
+	// маска для телефона
+	$('[type=tel]').mask('+7(000) 000-00-00');
 });
 

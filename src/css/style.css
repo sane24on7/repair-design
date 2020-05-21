@@ -342,8 +342,8 @@ template {
     z-index: 5;
     opacity: 0.5;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 100px;
+    right: 5%;
     width: 56px;
     height: 56px;
     border-radius: 50%;
@@ -416,6 +416,11 @@ template {
     border: 1px solid #e3b873;
     border-radius: 1px;
     margin-right: 1rem; }
+  .policy__label--center {
+    justify-content: center; }
+
+input.invalid {
+  border-bottom: 1px solid red; }
 
 .container {
   width: 90.67%;
@@ -937,6 +942,54 @@ body {
 .swiper-button-next {
   background: url("../img/arrow-next.svg") no-repeat center; }
 
+.footer {
+  background: #131313 url("../img/footer-bg.jpg"); }
+  .footer__form-wrap {
+    background: #181818 url("../img/form-footer-bg.svg") no-repeat center;
+    max-width: 88.3rem;
+    margin: auto;
+    padding: 3.45rem;
+    margin-bottom: 5.2rem; }
+  .footer__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 4.58rem; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 52rem;
+    margin: auto;
+    justify-content: space-between; }
+  .footer__label {
+    margin-bottom: -4px; }
+  .footer__input {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.8rem 0;
+    color: #fff; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 44%;
+      margin-bottom: 4.4rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2.6rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 5rem; }
+    .footer__policy__label {
+      font-size: 1.6rem; }
+  .footer__button {
+    font-size: 1.5rem;
+    padding: 1.8rem 6rem;
+    margin: auto; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 6rem 0; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
@@ -956,7 +1009,7 @@ body {
   .modal__dialog {
     position: relative;
     max-width: 50.6rem;
-    background: #131313 url("../img/bg-lines.svg") no-repeat center/cover;
+    background: #131313 url("../img/bg-lines-modal.svg") no-repeat center/cover;
     padding: 3rem 4.9rem 2.7rem;
     color: #fff; }
   .modal__close {
@@ -982,11 +1035,14 @@ body {
   .modal__label {
     margin-bottom: -0.3rem; }
   .modal__input {
-    margin-bottom: 4.5rem;
     border-bottom: 1px solid rgba(54, 54, 54, 0.3);
     color: #fff; }
-    .modal__input:last-of-type {
-      margin-bottom: 0.1rem; }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 4.5rem; }
+      .modal__input-group--last {
+        margin-bottom: 0.1rem; }
   .modal__policy {
     margin-bottom: 3.9rem; }
   .modal__button {
@@ -1222,7 +1278,36 @@ body {
   .swiper-slide__image {
     width: 100%;
     height: 202px;
-    overflow: hidden; } }
+    overflow: hidden; }
+  .footer {
+    background: #131313; }
+    .footer__title {
+      font-size: 20px;
+      margin-bottom: 54px; }
+    .footer__form-wrap {
+      background: #131313;
+      max-width: 100%;
+      margin: 0;
+      padding: 0; }
+    .footer__form {
+      max-width: 100%; }
+    .footer__input-group {
+      flex-basis: 100%;
+      margin-bottom: 60px; }
+      .footer__input-group--full-width {
+        margin-bottom: 6px; }
+    .footer__label {
+      font-size: 15px; }
+    .footer__input {
+      font-size: 18px; }
+    .footer__button {
+      flex-basis: 100%; }
+    .footer__policy {
+      margin-bottom: 69px; }
+      .footer__policy-label {
+        justify-content: flex-start; }
+    .footer__menu {
+      display: none; } }
 
 @media screen and (max-height: 550px) {
   .hero__scroll-down {

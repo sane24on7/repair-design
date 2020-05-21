@@ -17,7 +17,7 @@
 	&__dialog
 		position: relative
 		max-width: 50.6rem
-		background: $dark url('../img/bg-lines.svg') no-repeat center / cover
+		background: $dark url('../img/bg-lines-modal.svg') no-repeat center / cover
 		padding: 3rem 4.9rem 2.7rem
 		color: $light
 	&__close
@@ -43,11 +43,14 @@
 	&__label
 		margin-bottom: -0.3rem
 	&__input
-		margin-bottom: 4.5rem
+		&-group
+			display: flex
+			flex-direction: column
+			margin-bottom: 4.5rem
+			&--last
+				margin-bottom: 0.1rem
 		border-bottom: 1px solid rgba(54, 54, 54, 0.3)
 		color: $light
-		&:last-of-type
-			margin-bottom: 0.1rem
 	&__policy
 		margin-bottom: 3.9rem
 	&__button
