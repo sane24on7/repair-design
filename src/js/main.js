@@ -242,10 +242,9 @@ $(document).ready(function () {
 						// её "ножки" (точки привязки).
 						iconImageOffset: [-5, -38]
 				});
-
+		myMap.behaviors.disable('scrollZoom');
 		myMap.geoObjects
 				.add(myPlacemark)
-				.add(myPlacemarkWithContent);
 	});
 
 	ymaps.ready(function () {
@@ -277,10 +276,9 @@ $(document).ready(function () {
 						// её "ножки" (точки привязки).
 						iconImageOffset: [-5, -38]
 				});
-
+		myMap.behaviors.disable('scrollZoom');
 		myMap.geoObjects
 				.add(myPlacemark)
-				.add(myPlacemarkWithContent);
 	});
 
 });

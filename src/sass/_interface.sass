@@ -68,9 +68,9 @@
 	&__checkbox
 		opacity: 0
 		visibility: hidden
-		&:checked +
-			.policy__label
-				&::before
+		&:checked + .invalid + .policy__label::before
+					background: $primary url('../img/check.svg') no-repeat center / 0.8rem
+		&:checked + .policy__label::before
 					background: $primary url('../img/check.svg') no-repeat center / 0.8rem
 	&__label
 		display: flex
@@ -94,7 +94,7 @@ div
 		position: absolute
 		bottom: -16px
 		left: 0
-		color: tomato
+			color: tomato
 #controlPolicy-error, #footerPolicy-error
 	bottom: -16px
 	left: 37%

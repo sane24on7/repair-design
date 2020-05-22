@@ -405,6 +405,8 @@ template {
   .policy__checkbox {
     opacity: 0;
     visibility: hidden; }
+    .policy__checkbox:checked + .invalid + .policy__label::before {
+      background: #e3b873 url("../img/check.svg") no-repeat center/0.8rem; }
     .policy__checkbox:checked + .policy__label::before {
       background: #e3b873 url("../img/check.svg") no-repeat center/0.8rem; }
   .policy__label {
@@ -429,7 +431,7 @@ div.invalid {
   position: absolute;
   bottom: -16px;
   left: 0;
-  color: tomato; }
+    left-color: tomato; }
 
 #controlPolicy-error, #footerPolicy-error {
   bottom: -16px;
@@ -442,6 +444,10 @@ div.invalid {
   margin: auto; }
   .container-1236 {
     max-width: 1236px; }
+  .container-1028 {
+    width: 90.67%;
+    max-width: 1028px;
+    margin: auto; }
 
 .row {
   display: flex;
@@ -462,6 +468,9 @@ div.invalid {
 
 .col-38 {
   width: 38%; }
+
+.col-26 {
+  width: 26%; }
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -955,6 +964,10 @@ body {
 
 .swiper-button-next {
   background: url("../img/arrow-next.svg") no-repeat center; }
+
+.team__card-text {
+  padding: 2.2rem 2.1rem;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover; }
