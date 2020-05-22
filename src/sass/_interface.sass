@@ -55,6 +55,8 @@
 	border: none
 	font-size: 1.8rem
 	padding: 0.8rem 0
+	&__group
+		position: relative
 	&--light
 		&::placeholder
 			color: $light
@@ -62,6 +64,7 @@
 		&::placeholder
 			color: $dark
 .policy
+	position: relative
 	&__checkbox
 		opacity: 0
 		visibility: hidden
@@ -86,3 +89,13 @@
 input
 	&.invalid
 		border-bottom: 1px solid red
+div
+	&.invalid
+		position: absolute
+		bottom: -16px
+		left: 0
+		color: tomato
+#controlPolicy-error, #footerPolicy-error
+	bottom: -16px
+	left: 37%
+	color: tomato

@@ -103,7 +103,13 @@
 			width: 70%
 			align-self: center
 		&__policy
-			align-self: flex-start 
+			align-self: flex-start
+	// div
+	// 	&.invalid
+	// 		color: $light
+	#controlPolicy-error, #footerPolicy-error
+		left: 37%
+
 	//types
 	.types
 		padding-top: 9rem
@@ -181,6 +187,9 @@
 	.video
 		&__play
 			max-width: 67px
+	#controlPolicy-error, #footerPolicy-error
+		left: 0
+
 	// универсальная настройка карточек
 	.card
 		&__title
@@ -268,6 +277,9 @@
 	// footer
 	.footer
 		background: $dark
+		&__container
+			display: flex
+			flex-direction: column
 		&__title
 			font-size: 20px
 			margin-bottom: 54px
@@ -276,6 +288,7 @@
 			max-width: 100%
 			margin: 0
 			padding: 0
+			margin-bottom: 46px
 		&__form
 			max-width: 100%
 		&__input-group
@@ -295,6 +308,25 @@
 				justify-content: flex-start
 		&__menu
 			display: none
+		&-contacts
+			order: 5
+			&__word
+				display: inline
+			&__icons
+				max-width: 99px
+			&__round
+				width: 39px
+				height: 39px
+		&__map
+			&--pc
+				display: none
+			&--mobile
+				display: block
+				max-width: 100%
+				min-height: 255px
+	.map-wrap
+		margin-bottom: 42px
+
 @media screen and ( max-height: 550px )
 	.hero
 		&__scroll-down

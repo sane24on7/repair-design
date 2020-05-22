@@ -75,7 +75,7 @@ $(document).ready(function () {
 			// Анимация прокрутки вниз при нажатии на кнопку листать вниз
 	btnScrollDown.on('click', function(){
     $('body, html').animate({
-      scrollTop: 700
+      scrollTop: 900
     }, 1000);
     return false; 
 	});
@@ -133,27 +133,29 @@ $(document).ready(function () {
 	// Валидация формы модалки
 	$('.modal__form').validate({
 		rules: {
-			userName: {
+			uNameModal: {
 				required: true,
 				rangelength: [2, 15]
 			},
-			userPhone: "required",
-			userEmail: {
+			uPhoneModal: "required",
+			uEmailModal: {
 				required: true,
 				email: true
-			}
+			},
+			modalPolicy: "required"
+			
 		},
 		messages: {
-			userName: {
+			uNameModal: {
 				required: "Заполните поле",
 				rangelength: "Имя должно иметь от 2 до 15 символов"
 			},
-			userPhone: "Заполните поле",
-			userEmail: {
+			uPhoneModal: "Заполните поле",
+			uEmailModal: {
 				required: "Заполните поле",
 				email: "Введите корректный email"
 			},
-			
+			modalPolicy: "Согласие обязательно"
 		},
 		errorClass: "invalid",
 		errorElement: "div",
@@ -161,27 +163,21 @@ $(document).ready(function () {
 	// Валидация формы control
 	$('.control__form').validate({
 		rules: {
-			userName: {
+			uNameControl: {
 				required: true,
 				rangelength: [2, 15]
 			},
-			userPhone: "required",
-			userEmail: {
-				required: true,
-				email: true
-			}
+			uPhoneControl: "required",
+			controlPolicy: "required"
+
 		},
 		messages: {
-			userName: {
+			uNameControl: {
 				required: "Заполните поле",
 				rangelength: "Имя должно иметь от 2 до 15 символов"
 			},
-			userPhone: "Заполните поле",
-			userEmail: {
-				required: "Заполните поле",
-				email: "Введите корректный email"
-			},
-			
+			uPhoneControl: "Заполните поле",
+			controlPolicy: "Согласие обязательно"
 		},
 		errorClass: "invalid",
 		errorElement: "div",
@@ -189,27 +185,21 @@ $(document).ready(function () {
 	// Валидация формы footer
 	$('.footer__form').validate({
 		rules: {
-			userName: {
+			uNameFooter: {
 				required: true,
 				rangelength: [2, 15]
 			},
-			userPhone: "required",
-			userEmail: {
-				required: true,
-				email: true
-			}
+			uPhoneFooter: "required",
+			footerPolicy: "required"
+
 		},
 		messages: {
-			userName: {
+			uNameFooter: {
 				required: "Заполните поле",
 				rangelength: "Имя должно иметь от 2 до 15 символов"
 			},
-			userPhone: "Заполните поле",
-			userEmail: {
-				required: "Заполните поле",
-				email: "Введите корректный email"
-			},
-			
+			uPhoneFooter: "Заполните поле",
+			footerPolicy: "Согласие обязательно"
 		},
 		errorClass: "invalid",
 		errorElement: "div",
@@ -217,5 +207,81 @@ $(document).ready(function () {
 
 	// маска для телефона
 	$('[type=tel]').mask('+7(000) 000-00-00');
+
+	// яндекс карты
+
+
+	// Функция ymaps.ready() будет вызвана, когда
+	// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('mapPC', {
+						center: [47.244729, 39.723187],
+						zoom: 19
+				}, {
+						
+						searchControlProvider: 'yandex#search'
+				}),
+
+				// Создаём макет содержимого.
+				MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+						'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+				),
+
+				myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+						hintContent: 'Студия Repair Design Project',
+						balloonContent: 'Главный вход'
+				}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: 'img/gps.png',
+						// Размеры метки.
+						iconImageSize: [42, 42],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-5, -38]
+				});
+
+		myMap.geoObjects
+				.add(myPlacemark)
+				.add(myPlacemarkWithContent);
+	});
+
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('mapMobile', {
+						center: [47.244729, 39.723187],
+						zoom: 19
+				}, {
+						
+						searchControlProvider: 'yandex#search'
+				}),
+
+				// Создаём макет содержимого.
+				MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+						'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+				),
+
+				myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+						hintContent: 'Студия Repair Design Project',
+						balloonContent: 'Главный вход'
+				}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: 'img/gps.png',
+						// Размеры метки.
+						iconImageSize: [42, 42],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-5, -38]
+				});
+
+		myMap.geoObjects
+				.add(myPlacemark)
+				.add(myPlacemarkWithContent);
+	});
+
 });
 

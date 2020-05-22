@@ -8,9 +8,12 @@
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
+	
 	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.css">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=29a009d0-04c2-4b99-96cb-b9a36d7b6dbd&lang=ru_RU" type="text/javascript">
+	</script>
 </head>
 <body>
 
@@ -197,19 +200,19 @@
 				<p class="control__text wow fadeInDown" data-wow-delay="1s">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
 				<form action="#" class="form control__form wow fadeIn" data-wow-delay="1s">
 					
-					<div class="control__input-group">
-						<label for="user-name" class="label form__label control__label">Имя</label>
-						<input type="text" name="userName" class="input form__input control__input input--dark" id="user-name" placeholder="Как вас зовут:">
+					<div class="control__input-group input__group">
+						<label for="uNameControl" class="label form__label control__label">Имя</label>
+						<input type="text" name="uNameControl" class="input form__input control__input input--dark" id="uNameControl" placeholder="Как вас зовут:">
 					</div>
 					
-					<div class="control__input-group control__input-group--bot">
-						<label for="user-phone" class="label form__label control__label">Телефон</label>
-						<input type="tel" name="userPhone" class="input form__input control__input input--dark" id="user-phone" placeholder="Ваш номер телефона:">
+					<div class="control__input-group control__input-group--bot input__group">
+						<label for="uPhoneControl" class="label form__label control__label">Телефон</label>
+						<input type="tel" name="uPhoneControl" class="input form__input control__input input--dark" id="uPhoneControl" placeholder="Ваш номер телефона:">
 					</div>
 					<button class="button button--primary control__button">Отправить</button>
 					<div class="policy control__policy">
-						<input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-						<label for="policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
+						<input type="checkbox" name="controlPolicy" id="controlPolicy" class="policy__checkbox" checked>
+						<label for="controlPolicy" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
 					</div>
 					<!-- /.policy -->
 				</form>
@@ -398,25 +401,25 @@
 		
 	</main>
 	<footer class="footer section--dark">
-		<div class="container">
+		<div class="container footer__container">
 			<div class="footer__form-wrap">
 				<h3 class="footer__title">Остались вопросы?</h3>
 				<form action="#" class="footer__form">
-					<div class="footer__input-group">
-						<label for="user-name" class="label form__label label--light footer__label">Имя</label>
-						<input type="text" name="userName" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
+					<div class="footer__input-group input__group">
+						<label for="uNameFooter" class="label form__label label--light footer__label">Имя</label>
+						<input type="text" name="uNameFooter" class="input form__input footer__input input--light" id="uNameFooter" placeholder="Как вас зовут:">
 					</div>
-					<div class="footer__input-group">
-						<label for="user-phone" class="label form__label label--light footer__label">Телефон</label>
-						<input type="tel" name="userPhone" class="input form__input footer__input input--light" id="user-name" placeholder="Ваш номер телефона:">
+					<div class="footer__input-group input__group">
+						<label for="uPhoneFooter" class="label form__label label--light footer__label">Телефон</label>
+						<input type="tel" name="uPhoneFooter" class="input form__input footer__input input--light" id="uPhoneFooter" placeholder="Ваш номер телефона:">
 					</div>
-					<div class="footer__input-group footer__input-group--full-width">
-						<label for="user-question" class="label form__label label--light footer__label">Вопрос</label>
-						<input type="text" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">
+					<div class="footer__input-group footer__input-group--full-width input__group">
+						<label for="uQuestionFooter" class="label form__label label--light footer__label">Вопрос</label>
+						<input type="text" class="input form__input footer__input input--light" id="uQuestionFooter" placeholder="Я хочу спросить:">
 					</div>
 					<div class="policy footer__policy">
-						<input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-						<label for="policy-checkbox" class="policy__label footer__policy-label policy__label--center">Я соглашаюсь с обработкой данных</label>
+						<input type="checkbox" name="footerPolicy" id="footerPolicy" class="policy__checkbox" checked>
+						<label for="footerPolicy" class="policy__label footer__policy-label policy__label--center">Я соглашаюсь с обработкой данных</label>
 					</div>
 					<!-- /.policy -->
 					<button class="button button--primary footer__button">Отправить</button>
@@ -424,32 +427,46 @@
 				<!-- /.footer__form -->
 			</div>
 			<!-- /.footer__form-wrap -->
-			
+			<div class="footer__contacts footer-contacts">
+				<h3 class="footer-contacts__title">Ростов на дону, Торговый центр Plaza<span class="footer-contacts__word">Прямой телефон +7&nbsp;(999) 768 32 99</span></h3>
+				<div class="footer-contacts__icons">
+					<div class="footer-contacts__envelope footer-contacts__round"></div>
+					<!-- /.footer-contacts__envelope -->
+					<div class="footer-contacts__insta footer-contacts__round"></div>
+					<!-- /.footer-contacts__insta -->
+				</div>
+				<!-- /.footer-contacts__icons -->
+			</div>
+			<!-- /.footer-contacts -->
+			<div class="map-wrap">
+				<div id="mapPC" class="map-pc footer__map--pc"></div>
+				<div id="mapMobile" class="map-pc footer__map--mobile"></div>
+			</div>
 		</div>
 		<!-- /.container -->
-					<div class="footer__menu">
-						<div class="container">
-							<div class="menu">
-								<a href="index.html" class="logo menu__logo wow fadeIn" data-wow-delay="1.1s">Repair Design Project</a>
-								<nav class="nav menu__nav">
-									<a href="#" class="nav__item">Главная</a>
-									<a href="#" class="nav__item">Проекты</a>
-									<a href="#" class="nav__item">Замер</a>
-									<a href="#" class="nav__item">Команда</a>
-									<a href="#" class="nav__item">Отзывы</a>
-									<a href="#" class="nav__item">Контакты</a>
-								</nav>
-								<div class="contacts menu__contacts"><a href="tel:+79997683299" class="phone contacts__phone">+7 (999)
-									768-32-99</a>
-									<button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
-								</div>
-								<!-- /.contacts -->
-							</div>
-							<!-- /.menu -->
-						</div>
-						<!-- /.container -->
+		<div class="footer__menu wow fadeInUp">
+			<div class="container">
+				<div class="menu">
+					<a href="index.html" class="logo menu__logo wow fadeIn" data-wow-delay="1.1s">Repair Design Project</a>
+					<nav class="nav menu__nav">
+						<a href="#" class="nav__item">Главная</a>
+						<a href="#" class="nav__item">Проекты</a>
+						<a href="#" class="nav__item">Замер</a>
+						<a href="#" class="nav__item">Команда</a>
+						<a href="#" class="nav__item">Отзывы</a>
+						<a href="#" class="nav__item">Контакты</a>
+					</nav>
+					<div class="contacts menu__contacts"><a href="tel:+79997683299" class="phone contacts__phone">+7 (999)
+						768-32-99</a>
+						<button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
 					</div>
-					<!-- /.footer__menu -->
+					<!-- /.contacts -->
+				</div>
+				<!-- /.menu -->
+			</div>
+			<!-- /.container -->
+		</div>
+		<!-- /.footer__menu -->
 	</footer>
 	<!-- /.footer section--dark -->
 	<div class="modal">
@@ -457,21 +474,21 @@
 			<button class="modal__close"></button>
 			<h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
 			<form action="#" class="form modal__form">
-				<div class="input-group modal__input-group">
-					<label for="user-name" class="label modal__label label--light">Имя</label>
-					<input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
+				<div class="input-group modal__input-group input__group">
+					<label for="uNameModal" class="label modal__label label--light">Имя</label>
+					<input type="text" name="uNameModal" class="input form__input modal__input input--light" id="uNameModal" placeholder="Как вас зовут:">
 				</div>
-				<div class="input-group modal__input-group">
-					<label for="user-phone" class="label form__label modal__label label--light">Телефон</label>
-					<input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+				<div class="input-group modal__input-group input__group">
+					<label for="uPhoneModal" class="label form__label modal__label label--light">Телефон</label>
+					<input type="tel" name="uPhoneModal" class="input form__input modal__input input--light" id="uPhoneModal" placeholder="Ваш номер телефона:">
 				</div>
-				<div class="input-group modal__input-group modal__input-group--last">
-					<label for="user-email" class="label modal__label label--light">Email</label>
-					<input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email">
+				<div class="input-group modal__input-group modal__input-group--last input__group">
+					<label for="uEmailModal" class="label modal__label label--light">Email</label>
+					<input type="email" name="uEmailModal" class="input form__input modal__input input--light" id="uEmailModal" placeholder="Ваш email">
 				</div>
 				<div class="policy modal__policy">
-					<input type="checkbox" name="policy-checkbox" id="policy-checkbox" class="policy__checkbox" checked>
-					<label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
+					<input type="checkbox" name="modalPolicy" id="modalPolicy" class="policy__checkbox" checked>
+					<label for="modalPolicy" class="policy__label">Я соглашаюсь с обработкой данных</label>
 				</div>
 				<!-- /.policy -->
 				<button class="button button--primary modal__button">Отправить заявку</button>
