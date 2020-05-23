@@ -133,12 +133,12 @@ $(document).ready(function () {
 	// Валидация формы модалки
 	$('.modal__form').validate({
 		rules: {
-			uNameModal: {
+			userName: {
 				required: true,
 				rangelength: [2, 15]
 			},
-			uPhoneModal: "required",
-			uEmailModal: {
+			userPhone: "required",
+			userEmail: {
 				required: true,
 				email: true
 			},
@@ -146,12 +146,12 @@ $(document).ready(function () {
 			
 		},
 		messages: {
-			uNameModal: {
+			userName: {
 				required: "Заполните поле",
 				rangelength: "Имя должно иметь от 2 до 15 символов"
 			},
-			uPhoneModal: "Заполните поле",
-			uEmailModal: {
+			userPhone: "Заполните поле",
+			userEmail: {
 				required: "Заполните поле",
 				email: "Введите корректный email"
 			},
@@ -159,50 +159,89 @@ $(document).ready(function () {
 		},
 		errorClass: "invalid",
 		errorElement: "div",
+		submitHandler: function(form) {
+			$.ajax({
+				type: "POST",
+				url: "send.php",
+				data: $(form).serialize(),
+				success: function (response) {
+					console.log('Ajax сработал. Ответ сервера: ' + response);
+					alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+					$(form)[0].reset();
+					modal.removeClass('modal--visible');
+				}
+			});
+		}
 	});
 	// Валидация формы control
 	$('.control__form').validate({
 		rules: {
-			uNameControl: {
+			userName: {
 				required: true,
 				rangelength: [2, 15]
 			},
-			uPhoneControl: "required",
+			userPhone: "required",
 			controlPolicy: "required"
 
 		},
 		messages: {
-			uNameControl: {
+			userName: {
 				required: "Заполните поле",
 				rangelength: "Имя должно иметь от 2 до 15 символов"
 			},
-			uPhoneControl: "Заполните поле",
+			userPhone: "Заполните поле",
 			controlPolicy: "Согласие обязательно"
 		},
 		errorClass: "invalid",
 		errorElement: "div",
+		submitHandler: function(form) {
+			$.ajax({
+				type: "POST",
+				url: "send.php",
+				data: $(form).serialize(),
+				success: function (response) {
+					console.log('Ajax сработал. Ответ сервера: ' + response);
+					alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+					$(form)[0].reset();
+					modal.removeClass('modal--visible');
+				}
+			});
+		}
 	});
 	// Валидация формы footer
 	$('.footer__form').validate({
 		rules: {
-			uNameFooter: {
+			userName: {
 				required: true,
 				rangelength: [2, 15]
 			},
-			uPhoneFooter: "required",
+			userPhone: "required",
 			footerPolicy: "required"
 
 		},
 		messages: {
-			uNameFooter: {
+			userName: {
 				required: "Заполните поле",
 				rangelength: "Имя должно иметь от 2 до 15 символов"
 			},
-			uPhoneFooter: "Заполните поле",
+			userPhone: "Заполните поле",
 			footerPolicy: "Согласие обязательно"
 		},
 		errorClass: "invalid",
 		errorElement: "div",
+		submitHandler: function(form) {
+			$.ajax({
+				type: "POST",
+				url: "send.php",
+				data: $(form).serialize(),
+				success: function (response) {
+					console.log('Ajax сработал. Ответ сервера: ' + response);
+					alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+					$(form)[0].reset();
+					modal.removeClass('modal--visible');
+				}
+			});
+		}
 	});
 
 	// маска для телефона

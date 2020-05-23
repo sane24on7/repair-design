@@ -43,7 +43,7 @@
 	<main class="main">
 		<section class="hero">
 			<div class="instagram hero__instagram wow fadeInLeft" data-wow-delay="1s">
-				<a href="#" class="instagram__link">Instagram</a>
+				<a href="https://instagram.com/" class="instagram__link">Instagram</a>
 			</div>
 			<div class="container">
 				<div class="hero__content">
@@ -198,16 +198,16 @@
 				</div>
 				<!-- /.control__video video -->
 				<p class="control__text wow fadeInDown" data-wow-delay="1s">На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.</p>
-				<form action="#" class="form control__form wow fadeIn" data-wow-delay="1s">
+				<form action="send.php" method="POST" class="form control__form wow fadeIn" data-wow-delay="1s">
 					
 					<div class="control__input-group input__group">
 						<label for="uNameControl" class="label form__label control__label">Имя</label>
-						<input type="text" name="uNameControl" class="input form__input control__input input--dark" id="uNameControl" placeholder="Как вас зовут:">
+						<input type="text" name="userName" class="input form__input control__input input--dark" id="uNameControl" placeholder="Как вас зовут:">
 					</div>
 					
 					<div class="control__input-group control__input-group--bot input__group">
 						<label for="uPhoneControl" class="label form__label control__label">Телефон</label>
-						<input type="tel" name="uPhoneControl" class="input form__input control__input input--dark" id="uPhoneControl" placeholder="Ваш номер телефона:">
+						<input type="tel" name="userPhone" class="input form__input control__input input--dark" id="uPhoneControl" placeholder="Ваш номер телефона:">
 					</div>
 					<button class="button button--primary control__button">Отправить</button>
 					<div class="policy control__policy">
@@ -410,15 +410,17 @@
 					<p class="section-title__subtitle team__subtitle">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</p>
 				</div>
 				<!-- /.section-title -->
-				<div class="row">
+				<div class="row team__row">
 					<div class="col-26">
-						<div class="card team__card">
-							<img src="img/team/team1.jpg" alt="Алексей Колмаков" class="card__image">
+						<div class="card team__card team__card--project">
+							<div class="team__img-wrap">
+								<img src="img/team/team1.jpg" alt="Алексей Колмаков" class="team__image">
+							</div>
 							<div class="card__text team__card-text">
 								<h3 class="card__title team__card-title">Алексей Колмаков</h3>
 								<!-- /.card__title -->
 								<span class="card__job team__card-job">Проектный менеджер</span>
-								<strong class="card__tag team__tag">Опыт работы 8 лет</strong>
+								<strong class="card__tag team__card-tag">Опыт работы 8 лет</strong>
 							</div>
 							<!-- /.card__text -->
 						</div>
@@ -426,13 +428,15 @@
 					</div>
 					<!-- /.col-30 -->
 					<div class="col-26">
-						<div class="card team__card">
-							<img src="img/team/team2.jpg" alt="Алиса Сухорукова" class="card__image">
+						<div class="card team__card team__card--design">
+							<div class="team__img-wrap">
+								<img src="img/team/team2.jpg" alt="Алиса Сухорукова" class="team__image">
+							</div>
 							<div class="card__text team__card-text">
 								<h3 class="card__title team__card-title">Алиса Сухорукова</h3>
 								<!-- /.card__title -->
 								<span class="card__job team__card-job">Дизайнер</span>
-								<strong class="card__tag team__tag">Опыт работы 6 лет</strong>
+								<strong class="card__tag team__card-tag">Опыт работы 6 лет</strong>
 							</div>
 							<!-- /.card__text -->
 						</div>
@@ -440,13 +444,15 @@
 					</div>
 					<!-- /.col-30 -->
 					<div class="col-26">
-						<div class="card team__card">
-							<img src="img/team/team3.jpg" alt="Давид Волынев" class="card__image">
+						<div class="card team__card team__card--last team__card--brigadier">
+							<div class="team__img-wrap">
+								<img src="img/team/team3.jpg" alt="Давид Волынев" class="team__image">
+							</div>
 							<div class="card__text team__card-text">
 								<h3 class="card__title team__card-title">Давид Волынев</h3>
 								<!-- /.card__title -->
 								<span class="card__job team__card-job">Бригадир</span>
-								<strong class="card__tag team__tag">Опыт работы 7 лет</strong>
+								<strong class="card__tag team__card-tag">Опыт работы 7 лет</strong>
 							</div>
 							<!-- /.card__text -->
 						</div>
@@ -455,6 +461,7 @@
 					<!-- /.col-30 -->
 				</div>
 				<!-- /.row -->
+				<p class="team__text">Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.</p>
 			</div>
 			<!-- /.container -->
 		</section>
@@ -465,18 +472,18 @@
 		<div class="container footer__container">
 			<div class="footer__form-wrap">
 				<h3 class="footer__title">Остались вопросы?</h3>
-				<form action="#" class="footer__form">
+				<form action="send.php" method="POST" class="footer__form">
 					<div class="footer__input-group input__group">
 						<label for="uNameFooter" class="label form__label label--light footer__label">Имя</label>
-						<input type="text" name="uNameFooter" class="input form__input footer__input input--light" id="uNameFooter" placeholder="Как вас зовут:">
+						<input type="text" name="userName" class="input form__input footer__input input--light" id="uNameFooter" placeholder="Как вас зовут:">
 					</div>
 					<div class="footer__input-group input__group">
 						<label for="uPhoneFooter" class="label form__label label--light footer__label">Телефон</label>
-						<input type="tel" name="uPhoneFooter" class="input form__input footer__input input--light" id="uPhoneFooter" placeholder="Ваш номер телефона:">
+						<input type="tel" name="userPhone" class="input form__input footer__input input--light" id="uPhoneFooter" placeholder="Ваш номер телефона:">
 					</div>
 					<div class="footer__input-group footer__input-group--full-width input__group">
 						<label for="uQuestionFooter" class="label form__label label--light footer__label">Вопрос</label>
-						<input type="text" class="input form__input footer__input input--light" id="uQuestionFooter" placeholder="Я хочу спросить:">
+						<input type="text" name="userQuestion" class="input form__input footer__input input--light" id="uQuestionFooter" placeholder="Я хочу спросить:">
 					</div>
 					<div class="policy footer__policy">
 						<input type="checkbox" name="footerPolicy" id="footerPolicy" class="policy__checkbox" checked>
@@ -489,7 +496,7 @@
 			</div>
 			<!-- /.footer__form-wrap -->
 			<div class="footer__contacts footer-contacts">
-				<h3 class="footer-contacts__title">Ростов на дону, Торговый центр Plaza <span class="footer-contacts__word">Прямой телефон +7&nbsp;(999) 768 32 99</span></h3>
+				<h3 class="footer-contacts__title">Ростов на дону, Торговый центр Plaza <span class="footer-contacts__word">Прямой телефон +7&nbsp;(999)&nbsp;768&nbsp;32&nbsp;99</span></h3>
 				<div class="footer-contacts__icons">
 					<a href="#" class="footer-contacts__envelope footer-contacts__round"></a>
 					<!-- /.footer-contacts__envelope -->
@@ -534,18 +541,18 @@
 		<div class="modal__dialog">
 			<button class="modal__close"></button>
 			<h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
-			<form action="#" class="form modal__form">
+			<form action="send.php" method="POST" class="form modal__form">
 				<div class="input-group modal__input-group input__group">
 					<label for="uNameModal" class="label modal__label label--light">Имя</label>
-					<input type="text" name="uNameModal" class="input form__input modal__input input--light" id="uNameModal" placeholder="Как вас зовут:">
+					<input type="text" name="userName" class="input form__input modal__input input--light" id="uNameModal" placeholder="Как вас зовут:">
 				</div>
 				<div class="input-group modal__input-group input__group">
 					<label for="uPhoneModal" class="label form__label modal__label label--light">Телефон</label>
-					<input type="tel" name="uPhoneModal" class="input form__input modal__input input--light" id="uPhoneModal" placeholder="Ваш номер телефона:">
+					<input type="tel" name="userPhone" class="input form__input modal__input input--light" id="uPhoneModal" placeholder="Ваш номер телефона:">
 				</div>
 				<div class="input-group modal__input-group modal__input-group--last input__group">
 					<label for="uEmailModal" class="label modal__label label--light">Email</label>
-					<input type="email" name="uEmailModal" class="input form__input modal__input input--light" id="uEmailModal" placeholder="Ваш email">
+					<input type="email" name="userEmail" class="input form__input modal__input input--light" id="uEmailModal" placeholder="Ваш email">
 				</div>
 				<div class="policy modal__policy">
 					<input type="checkbox" name="modalPolicy" id="modalPolicy" class="policy__checkbox" checked>

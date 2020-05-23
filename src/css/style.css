@@ -431,7 +431,7 @@ div.invalid {
   position: absolute;
   bottom: -16px;
   left: 0;
-    left-color: tomato; }
+  color: tomato; }
 
 #controlPolicy-error, #footerPolicy-error {
   bottom: -16px;
@@ -470,7 +470,7 @@ div.invalid {
   width: 38%; }
 
 .col-26 {
-  width: 26%; }
+  flex-basis: 26%; }
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -630,6 +630,8 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero__thanks {
+    height: 100vh; }
   .hero__instagram {
     position: absolute;
     left: 0;
@@ -858,7 +860,7 @@ body {
     padding: 1.7rem 4rem; }
 
 .project {
-  padding: 153px 0 0 0;
+  padding: 15.3rem 0 45.4rem 0;
   background: linear-gradient(to bottom, #fff 50%, #131313 50%); }
   .project__subtitle {
     margin-top: 2rem;
@@ -965,9 +967,105 @@ body {
 .swiper-button-next {
   background: url("../img/arrow-next.svg") no-repeat center; }
 
-.team__card-text {
-  padding: 2.2rem 2.1rem;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05); }
+.team {
+  padding: 9.515rem 0;
+  margin-top: -50.2rem; }
+  .team__section-title {
+    color: #fff; }
+  .team__subtitle {
+    margin-top: 2.2rem;
+    color: #fff; }
+  .team__subtitle {
+    max-width: 44.8rem;
+    margin-bottom: 8.6rem; }
+  .team__img-wrap {
+    position: relative;
+    min-width: 27.2rem;
+    min-height: 34rem;
+    overflow: hidden; }
+  .team__image {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50%  10%;
+    object-position: 50%  10%; }
+  .team__card {
+    position: relative; }
+    .team__card--project::after {
+      content: '';
+      position: absolute;
+      top: -36px;
+      left: -36px;
+      background: #e3b873 url("../img/team/idea.svg") no-repeat center;
+      width: 70px;
+      height: 70px;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+    .team__card--design::after {
+      content: '';
+      position: absolute;
+      top: -36px;
+      left: -36px;
+      background: #e3b873 url("../img/team/pen.svg") no-repeat center;
+      width: 70px;
+      height: 70px;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+    .team__card--brigadier::after {
+      content: '';
+      position: absolute;
+      top: -36px;
+      left: -36px;
+      background: #e3b873 url("../img/team/portfolio.svg") no-repeat center;
+      width: 70px;
+      height: 70px;
+      box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
+    .team__card-text {
+      position: relative;
+      background-color: #fff;
+      max-width: 23.3rem;
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
+      margin-top: -8.4rem;
+      padding: 2.2rem 2.1rem 2.4rem; }
+    .team__card-title {
+      font-family: 'Yeseva One', cursive;
+      font-size: 1.8rem;
+      margin-bottom: 0.9rem;
+      font-weight: normal;
+      text-align: center; }
+    .team__card-job {
+      display: block;
+      font-size: 1.8rem;
+      color: #959595;
+      text-align: center;
+      margin-bottom: 4rem; }
+    .team__card-tag {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      background-color: #e3b873;
+      font-family: 'Yeseva One', cursive;
+      font-size: 1.3rem;
+      font-weight: normal;
+      text-transform: uppercase;
+      color: #fff;
+      padding: 1.5rem;
+      text-align: center;
+      width: 100%; }
+  .team__text {
+    max-width: 56.8rem;
+    font-size: 2rem;
+    line-height: 169.8%;
+    text-align: center;
+    margin: auto; }
+    .team__text::before {
+      content: '';
+      display: block;
+      width: 55px;
+      height: 2px;
+      background-color: #e3b873;
+      margin: auto;
+      margin-top: 5.3rem;
+      margin-bottom: 1.25rem; }
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover; }
@@ -1159,7 +1257,18 @@ body {
     flex-direction: column;
     align-items: center; }
   .card__text {
-    margin-left: 0; } }
+    margin-left: 0; }
+  .col-26 {
+    flex-basis: 100%; }
+  .team {
+    background-color: #131313; }
+    .team__text {
+      color: #fff; }
+    .team__card {
+      margin-bottom: 50px; }
+    .team__card-text {
+      margin-left: auto;
+      margin-right: auto; } }
 
 @media screen and (max-width: 760px) {
   .fin-projects {
@@ -1346,6 +1455,39 @@ body {
     width: 100%;
     height: 202px;
     overflow: hidden; }
+  .team {
+    background-color: #131313; }
+    .team__text {
+      display: none; }
+    .team__img-wrap {
+      min-width: 30.5rem;
+      min-height: 35.7rem; }
+    .team__card {
+      margin-bottom: 88px;
+      padding-left: 35px; }
+      .team__card--last {
+        margin-bottom: 0; }
+      .team__card--project::after, .team__card--design::after, .team__card--brigadier::after {
+        top: -35px;
+        left: 0; }
+      .team__card-text {
+        margin: auto;
+        margin-top: -81px;
+        padding: 21px 20px 34px;
+        min-width: 233px; }
+      .team__card-title {
+        font-size: 18px; }
+      .team__card-job {
+        font-size: 18px; }
+      .team__card-tag {
+        font-size: 13px;
+        width: 100%;
+        padding: 14px 0; }
+    .team__subtitle {
+      max-width: 100%;
+      font-size: 15px;
+      line-height: 135.84%;
+      margin: 16px 0 80px; }
   .footer {
     background: #131313; }
     .footer__container {
